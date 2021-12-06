@@ -62,7 +62,7 @@ public void setstck(String newstck){stck.set(newstck);}
     public String getprice() {
         return price.get();
     }
-    public void setprice(String newprice){id.set(newprice);}
+    public void setprice(String newprice){price.set(newprice);}
             
             @Override
             public String toString(){

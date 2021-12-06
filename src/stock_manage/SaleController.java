@@ -89,6 +89,7 @@ public class SaleController implements Initializable {
     PreparedStatement pst2;
     PreparedStatement pst3;
     
+    
       @FXML
     void check(ActionEvent event) throws SQLException {
         Connect();

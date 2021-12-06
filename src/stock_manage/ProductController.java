@@ -80,10 +80,54 @@ public class ProductController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
+     PreparedStatement pst4;
     @FXML
     void update(ActionEvent event) {
+                Connect();
+        String pid = txtid.getText();
+        String pname = txtname.getText();
+        String stock = txtquantity.getText();
+        String minstock = txtmin.getText();
+        String price = txtprice.getText();
+ try {
+            pst4 = con.prepareStatement("update products SET pname=?,stock=?,minstock=?,price=? where pid=?");
+            pst4.setString(5, pid);
+            pst4.setString(1, pname);
+            pst4.setString(2, stock);
+            pst4.setString(3, minstock);
+            pst4.setString(4, price);
+            int status = pst4.executeUpdate();
+             
+             if(status==1)
+             { 
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Success");
+                alert.setHeaderText("Products");
+                alert.setContentText("products Updated Successfully");
+                alert.showAndWait();
+                table();
+                txtid.setText("");
+                txtname.setText("");
+                txtquantity.setText("");
+                txtmin.setText("");
+                txtprice.setText("");
 
+                txtid.requestFocus();
+                
+             }
+             else
+             {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Fail");
+                alert.setHeaderText("Products");
+                alert.setContentText("products Updating Failed");
+                alert.showAndWait();
+             }
+            } 
+          catch (SQLException ex)
+       {
+           Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+       }
     }
     
     Connection con;
