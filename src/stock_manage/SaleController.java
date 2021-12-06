@@ -152,8 +152,6 @@ public class SaleController implements Initializable {
                 txtquantity.setText("");
                 txtpid.setText("");
                 txtprice.setText("");
-
-
                 txtpid.requestFocus();
                 
              }

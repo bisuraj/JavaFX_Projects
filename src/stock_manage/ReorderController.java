@@ -135,6 +135,8 @@ public class ReorderController implements Initializable {
                 alert.setHeaderText("Reorder");
                 alert.setContentText("Reordered Successfully");
                 alert.showAndWait();
+                
+                
                  }
                 if(stck>min){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
