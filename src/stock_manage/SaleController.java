@@ -26,6 +26,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -59,9 +60,12 @@ public class SaleController implements Initializable {
 
     @FXML
     void goback(ActionEvent event) throws IOException {
-                Parent part = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+        Parent part = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
         Stage stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(part);
+        Image icon =new Image(getClass().getResourceAsStream("mainlogo.png"));
+        stage.getIcons().add(icon);
+                stage.setTitle("Stock Management");
         stage.setScene(scene);
         stage.show();
 

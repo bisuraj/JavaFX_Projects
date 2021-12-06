@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -38,6 +39,9 @@ public class DashboardController implements Initializable {
         Parent part = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Stage stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(part);
+        Image icon =new Image(getClass().getResourceAsStream("mainlogo.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
 
@@ -48,6 +52,9 @@ public class DashboardController implements Initializable {
         Parent part = FXMLLoader.load(getClass().getResource("product.fxml"));
         Stage stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(part);
+                Image icon =new Image(getClass().getResourceAsStream("mainlogo.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("Products");
         stage.setScene(scene);
         stage.show();
     }
@@ -57,6 +64,9 @@ public class DashboardController implements Initializable {
         Parent part = FXMLLoader.load(getClass().getResource("reorder.fxml"));
         Stage stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(part);
+                Image icon =new Image(getClass().getResourceAsStream("mainlogo.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("Reorder");
         stage.setScene(scene);
         stage.show();
     }
@@ -67,6 +77,9 @@ public class DashboardController implements Initializable {
         Parent part = FXMLLoader.load(getClass().getResource("sale.fxml"));
         Stage stage =(Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(part);
+                Image icon =new Image(getClass().getResourceAsStream("mainlogo.png"));
+        stage.getIcons().add(icon);
+        stage.setTitle("Sale");
         stage.setScene(scene);
         stage.show();
     }
