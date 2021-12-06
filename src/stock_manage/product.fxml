@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="759.0" style="-fx-background-color: #CAD5E2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock_manage.ProductController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#242b2e" height="69.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="759.0" />
+      <Button fx:id="btnadd" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#Add" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: #242B2E;" text="ADD" textFill="#a5aeb1" />
+      <Button fx:id="btnupdate" layoutX="24.0" layoutY="413.0" mnemonicParsing="false" onAction="#update" prefHeight="42.0" prefWidth="133.0" style="-fx-background-color: #242B2E;" text="UPDATE" textFill="#a5aeb1" />
+      <Button fx:id="btnback" layoutX="24.0" layoutY="469.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: #242B2E;" text="GO BACK" textFill="#a5aeb1" />
+      <TableView fx:id="main_table" layoutX="224.0" layoutY="88.0" prefHeight="402.0" prefWidth="532.0">
+         <columns>
+            <TableColumn fx:id="pid" prefWidth="92.800048828125" text="PID" />
+            <TableColumn fx:id="pname" prefWidth="155.20001220703125" text="Product Name" />
+            <TableColumn fx:id="stock" prefWidth="90.39996337890625" text="Stock" />
+            <TableColumn fx:id="minstock" prefWidth="92.0" text="Min Stock " />
+            <TableColumn fx:id="price" prefWidth="95.20001220703125" text="Price" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtid" layoutX="24.0" layoutY="125.0" promptText="Enter The Product ID" />
+      <TextField fx:id="txtname" layoutX="24.0" layoutY="165.0" promptText="Enter The Product Name" />
+      <TextField fx:id="txtquantity" layoutX="24.0" layoutY="204.0" promptText="Enter The Quantity" />
+      <TextField fx:id="txtmin" layoutX="24.0" layoutY="243.0" promptText="Enter The Min Stock" />
+      <TextField fx:id="txtprice" layoutX="24.0" layoutY="283.0" promptText="Enter The Price" />
+      <Text layoutX="17.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENTER THE PRODUCT DETAILS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text fill="#ac9e9e" layoutX="311.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTS">
+         <font>
+            <Font name="Bell MT Bold" size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock_manage.ReorderController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#242b2e" height="101.0" stroke="BLACK" strokeType="INSIDE" width="654.0" />
+      <TextField fx:id="txtpname" layoutX="160.0" layoutY="162.0" prefHeight="26.0" prefWidth="166.0" promptText="Product Name" />
+      <Text layoutX="32.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
+      <Text layoutX="31.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+      <Button fx:id="btnreorder" layoutX="243.0" layoutY="324.0" mnemonicParsing="false" onAction="#reorder" prefHeight="54.0" prefWidth="166.0" style="-fx-background-color: #242B2E;" text="Check And Reorder " textFill="#e7dbdb" />
+      <Label layoutX="239.0" layoutY="29.0" text="REORDER" textFill="#cad5e2">
+         <font>
+            <Font name="Roboto Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="16.0" layoutY="379.0" mnemonicParsing="false" onAction="#goback" prefHeight="38.0" prefWidth="87.0" style="-fx-background-color: #242B2E;" text="GO BACK" textFill="#e7dbdb" />
+      <Text layoutX="35.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min Quantity" />
+      <Text layoutX="47.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <TextField fx:id="txtpid" layoutX="160.0" layoutY="123.0" prefHeight="26.0" prefWidth="166.0" promptText="Productid" />
+      <TextField fx:id="txtmin" layoutX="160.0" layoutY="202.0" prefHeight="26.0" prefWidth="166.0" promptText="Min quantity" />
+      <TextField fx:id="txtprice" layoutX="160.0" layoutY="244.0" prefHeight="26.0" prefWidth="166.0" promptText="price" />
+      <Button fx:id="tbndetails" layoutX="393.0" layoutY="121.0" mnemonicParsing="false" onAction="#details" style="-fx-background-color: #242b2e;" text="Get Details" textFill="#b1b1b1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
